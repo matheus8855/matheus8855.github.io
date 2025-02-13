@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Matheus Silva da Silveira</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Referência ao CSS -->
+</head>
+<body>
+    <!-- Botões flutuantes à esquerda -->
+    <div class="floating-buttons">
+        <a href="https://github.com/seu-usuario" target="_blank" class="floating-button">GitHub</a>
+        <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" class="floating-button">LinkedIn</a>
+        <a href="mailto:matheussilveira85@gmail.com" class="floating-button">E-mail</a>
+    </div>
+
+    <header>
+        <h1 style="color: #2c3e50;">Matheus Silveira</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#experiencias">Experiências</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <span id="theme-toggle">🌙</span>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <p>
+            Profissional de tecnologia | Desenvolvedor de back-end e analista de dados | Python, SQL, integrações de nuvem
+            Apaixonado por criar soluções web escaláveis ​​e alavancar dados para insights de negócios. Experiente em desenvolvimento de API, visualização de dados e automação de processos. Sólida experiência em desenvolvimento de back-end (Node.js, Django), bancos de dados SQL e serviços de nuvem (AWS). Bilíngue (português, espanhol) com proficiência profissional em inglês. Sempre aberto a novos desafios e oportunidades em projetos internacionais.
+        </p>
+    </section>
+
+    <section id="experiencias">
+        <h2>Experiências Profissionais</h2>
+        <ul>
+            <li>
+                <strong>BackEnd Developer Proficient</strong> - Softtek Soluções em Sistemas LTDA | 01/2025 - Atualmente
+                <ul>
+                    <li>Criação, otimização e manutenção de sistemas web e móveis.</li>
+                    <li>Desenvolvimento de APIs seguras e escaláveis.</li>
+                    <li>Modelagem e gestão de bancos de dados relacionais e não-relacionais.</li>
+                    <li>Colaboração utilizando metodologias ágeis.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Professor de Programação</strong> - Associação Casa do Pai | 08/2024 - Atualmente
+                <ul>
+                    <li>Ensino de C# e Java com foco em automação e Indústria 4.0.</li>
+                    <li>Desenvolvimento de materiais didáticos alinhados ao mercado.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Analista de Suporte Bilíngue</strong> - Stefanini Group | 02/2024 - 12/2024
+                <ul>
+                    <li>Suporte técnico remoto e presencial.</li>
+                    <li>Criação de dashboards em Power BI integrados com AWS.</li>
+                    <li>Automação de análise de dados com Python.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Analista de Rede Nível 2</strong> - NDC Internet | 08/2019 - 03/2023
+                <ul>
+                    <li>Monitoramento e manutenção de redes de alta disponibilidade.</li>
+                    <li>Configuração e gerenciamento de dispositivos de rede.</li>
+                    <li>Suporte técnico para clientes empresariais.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <ul>
+            <li>
+                <strong>Dashboard de Análise de Dados</strong>
+                <p>Um painel interativo criado em Power BI para monitoramento de métricas de ativos.</p>
+                <p><em>Power BI, SQL, AWS</em></p>
+            </li>
+            <li>
+                <strong>Sistema de Gestão Escolar</strong>
+                <p>Aplicação web para gestão de alunos, professores e notas, desenvolvida em Django.</p>
+                <p><em>Django, Python, PostgreSQL</em></p>
+            </li>
+            <li>
+                <strong>Sistema de Gestão Empresarial</strong>
+                <p>Uma plataforma abrangente para gestão empresarial, integrando automações que facilitam o dia a dia do usuário e funcionalidades avançadas para gestão de ativos. Permite controle financeiro, monitoramento de recursos e geração de relatórios automatizados.</p>
+                <p><em>Java, Spring Boot, PostgreSQL, React</em></p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+            <li>C#</li>
+            <li>Django</li>
+            <li>Spring Boot</li>
+            <li>Node.js</li>
+            <li>AWS</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 Matheus Silva da Silveira. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // Função para alternar entre temas claro e escuro
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Simulação de envio do formulário (sem backend)
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Mensagem enviada com sucesso!');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
